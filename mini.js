@@ -112,7 +112,8 @@ function arrayAdd() {
 }
 function equalTo() {
   operator = calc.pop();
-  var tempNumber = parseInt(calc.pop());
+  var tempNumber = parseFloat(calc.pop());
+  console.log(tempNumber);
   if (operator == "+") {
     number = tempNumber + parseInt(number);
     document.getElementById("display").value = number;
@@ -131,13 +132,12 @@ function equalTo() {
     number = "";
   }
 }
-function crypto(){
-    var inr = parseInt(document.getElementById("inr").value);
-    var usd = inr * 0.012;
-    document.getElementById("usd").value = usd;
-    document.getElementById("btc").value = usd * 0.000037;
-    document.getElementById("eth").value = usd * 0.00054;
-    document.getElementById("doge").value = usd * 13.69;
-    document.getElementById("sol").value = usd * 0.0513;
-    
+function crypto() {
+  var inr = parseInt(document.getElementById("inr").value);
+  var usd = inr * 0.012;
+  document.getElementById("usd").value = usd;
+  document.getElementById("btc").value = usd * 0.000037;
+  document.getElementById("eth").value = usd * 0.00054;
+  document.getElementById("doge").value = usd * 13.69;
+  document.getElementById("sol").value = usd * 0.0513;
 }
