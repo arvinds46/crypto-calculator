@@ -1,4 +1,6 @@
         var number = "";
+        var operator = null;
+        var calc = [];
         function add(){
             var x = Number(document.getElementById("first").value);
             var y = Number(document.getElementById("second").value);
@@ -78,9 +80,62 @@
             console.log(number);
             document.getElementById("display").value = number;
         }
-        function clear(){
-            console.log("called clear");
-            container.number = "";
-            console.log("cleared");
+        function addDot(){
+            number = number + document.getElementById("dot").value;
+            console.log(number);
             document.getElementById("display").value = number;
+        }
+        function clear(){
+            number = "";
+            document.getElementById("display").value = number;
+        }
+        function addition(){
+            operator = "+";
+            arrayAdd(operator);
+        }
+        function subtract(){
+            operator = "-";
+            arrayAdd(operator);
+        }
+        function multiply(){
+            operator = "*";
+            arrayAdd(operator);
+        }
+        function division(){
+            operator = "/";
+            arrayAdd(operator);
+        }
+        function arrayAdd(){
+            calc.push(number);
+            calc.push(operator);
+            number="";
+            document.getElementById("display").value = number;
+        }
+        function equalTo(){
+            operator = calc.pop();
+            var tempNumber = parseInt(calc.pop());
+            if(operator == "+")
+            {
+                number = tempNumber + parseInt(number);
+                document.getElementById("display").value = number;
+                number="";
+            }
+            else if(operator == "-")
+            {
+                number = tempNumber - parseInt(number);
+                document.getElementById("display").value = number;
+                number="";
+            }
+            else if(operator == "*")
+            {
+                number = tempNumber * parseInt(number);
+                document.getElementById("display").value = number;
+                number="";
+            }
+            else if(operator == "/")
+            {
+                number = tempNumber / parseInt(number);
+                document.getElementById("display").value = number;
+                number="";
+            }
         }
