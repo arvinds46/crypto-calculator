@@ -79,10 +79,10 @@ function addZero() {
   console.log(number);
   document.getElementById("display").value = number;
 }
-function addDot() {
+function addDot() { 
+  document.getElementById("display").value = number + ".";
   number = number + document.getElementById("dot").value;
   console.log(number);
-  document.getElementById("display").value = number;
 }
 function clear() {
   number = "";

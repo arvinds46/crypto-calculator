@@ -1,0 +1,14 @@
+
+.btn-num{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 100%;
+}
+.btn-two-col{
+    width: 9rem;
+    height: 4rem;
+    border-radius: 5rem;
+}
+.calc-display{
+    width: 18.5rem;
+}
