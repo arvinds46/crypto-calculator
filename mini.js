@@ -28,7 +28,10 @@ function divide() {
 
   document.getElementById("result").value = x / y;
 }
-
+function ac() {
+    number="";
+    document.getElementById("display").value = number;
+}
 function addOne() {
   number = number + document.getElementById("one").value;
   console.log(number);
@@ -84,9 +87,12 @@ function addDot() {
   number = number + document.getElementById("dot").value;
   console.log(number);
 }
-function clear() {
-  number = "";
-  document.getElementById("display").value = number;
+function negate() {
+    if(number.slice(0,1) === "-")
+        number = number.substring(1);
+    else
+        number = "-" + number;
+    document.getElementById("display").value = number;
 }
 function addition() {
   operator = "+";
