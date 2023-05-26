@@ -117,26 +117,22 @@ function arrayAdd() {
   document.getElementById("display").value = number;
 }
 function equalTo() {
-  operator = calc.pop();
+  for(let i = 0; i < calc.length; i++)
+  {
+    operator = calc.pop();
   var tempNumber = parseFloat(calc.pop());
   console.log(tempNumber);
   if (operator == "+") {
     number = tempNumber + parseInt(number);
-    document.getElementById("display").value = number;
-    number = "";
   } else if (operator == "-") {
     number = tempNumber - parseInt(number);
-    document.getElementById("display").value = number;
-    number = "";
   } else if (operator == "*") {
     number = tempNumber * parseInt(number);
-    document.getElementById("display").value = number;
-    number = "";
   } else if (operator == "/") {
     number = tempNumber / parseInt(number);
-    document.getElementById("display").value = number;
-    number = "";
   }
+  }
+  document.getElementById("display").value = number;
 }
 function crypto() {
   var inr = parseInt(document.getElementById("inr").value);
