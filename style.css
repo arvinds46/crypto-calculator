@@ -12,3 +12,9 @@
 .calc-display{
     width: 18.5rem;
 }
+.calculator{
+    margin-left: 35%;
+    width: 30%;
+    padding-left: 2%;
+    border-radius: 1rem;
+}
